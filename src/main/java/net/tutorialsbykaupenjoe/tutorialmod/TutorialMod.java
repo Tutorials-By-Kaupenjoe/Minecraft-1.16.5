@@ -60,11 +60,9 @@ public class TutorialMod
 
     private void processIMC(final InterModProcessEvent event)
     {
-        // some example code to receive and process InterModComms from other mods
-        LOGGER.info("Got IMC {}", event.getIMCStream().
-                map(m->m.getMessageSupplier().get()).
-                collect(Collectors.toList()));
+
     }
+
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(FMLServerStartingEvent event) {
