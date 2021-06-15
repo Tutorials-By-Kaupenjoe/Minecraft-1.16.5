@@ -1,3 +1,5 @@
 {
-  "item.tutorialmod.amethyst": "Amethyst"
+  "item.tutorialmod.amethyst": "Amethyst",
+
+  "itemGroup.tutorialModTab": "Tutorial Mod"
 }
