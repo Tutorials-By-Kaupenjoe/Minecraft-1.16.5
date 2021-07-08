@@ -11,8 +11,10 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.tutorialsbykaupenjoe.tutorialmod.TutorialMod;
+import net.tutorialsbykaupenjoe.tutorialmod.block.custom.FirestoneBlock;
 import net.tutorialsbykaupenjoe.tutorialmod.item.ModItemGroup;
 import net.tutorialsbykaupenjoe.tutorialmod.item.ModItems;
+import net.tutorialsbykaupenjoe.tutorialmod.item.custom.Firestone;
 
 import java.util.function.Supplier;
 
@@ -28,6 +30,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> AMETHYST_BLOCK = registerBlock("amethyst_block",
             () -> new Block(AbstractBlock.Properties.create(Material.ROCK)
                     .harvestLevel(2).setRequiresTool().harvestTool(ToolType.PICKAXE).hardnessAndResistance(8f)));
+
+    public static final RegistryObject<Block> FIRESTONE_BLOCK = registerBlock("firestone_block",
+            () -> new FirestoneBlock(AbstractBlock.Properties.create(Material.IRON)
+                    .harvestLevel(2).setRequiresTool().harvestTool(ToolType.PICKAXE).hardnessAndResistance(6f)));
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
