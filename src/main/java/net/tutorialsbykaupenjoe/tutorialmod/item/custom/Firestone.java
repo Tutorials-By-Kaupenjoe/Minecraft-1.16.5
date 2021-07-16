@@ -23,6 +23,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
+import net.tutorialsbykaupenjoe.tutorialmod.util.TutorialTags;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -73,7 +74,7 @@ public class Firestone extends Item {
     }
 
     private boolean blockIsValidForResistance(BlockState clickedBlock) {
-        return clickedBlock.getBlock() == Blocks.OBSIDIAN;
+        return clickedBlock.isIn(TutorialTags.Blocks.FIRESTONE_CLICKABLE_BLOCKS);
     }
 
     public static void lightEntityOnFire(Entity entity, int second) {

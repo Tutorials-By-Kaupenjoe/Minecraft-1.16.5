@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "item": "tutorialmod:amethyst"
+      "tag": "forge:gems/amethyst"
     },
     "S": {
       "item": "minecraft:stone"
