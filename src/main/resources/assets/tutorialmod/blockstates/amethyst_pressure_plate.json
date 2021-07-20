@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "powered=false": { "model": "tutorialmod:block/amethyst_pressure_plate" },
+    "powered=true": { "model": "tutorialmod:block/amethyst_pressure_plate_down" }
+  }
+}
