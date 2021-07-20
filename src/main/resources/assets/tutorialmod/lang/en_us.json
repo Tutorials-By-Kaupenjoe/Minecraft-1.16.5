@@ -1,6 +1,11 @@
 {
   "item.tutorialmod.amethyst": "Amethyst",
   "item.tutorialmod.firestone": "Firestone",
+  "item.tutorialmod.amethyst_sword": "Amethyst Sword",
+  "item.tutorialmod.amethyst_shovel": "Amethyst Shovel",
+  "item.tutorialmod.amethyst_axe": "Amethyst Axe",
+  "item.tutorialmod.amethyst_pickaxe": "Amethyst Pickaxe",
+  "item.tutorialmod.amethyst_hoe": "Amethyst Hoe",
   "block.tutorialmod.amethyst_ore": "Amethyst Ore",
   "block.tutorialmod.amethyst_block": "Amethyst Block",
   "block.tutorialmod.firestone_block": "Firestone Block",
