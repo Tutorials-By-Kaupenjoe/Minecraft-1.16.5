@@ -60,6 +60,8 @@ public class TutorialMod {
         event.enqueueWork(() -> {
             RenderTypeLookup.setRenderLayer(ModBlocks.AMETHYST_DOOR.get(), RenderType.getCutout());
             RenderTypeLookup.setRenderLayer(ModBlocks.AMETHYST_TRAPDOOR.get(), RenderType.getCutout());
+
+            RenderTypeLookup.setRenderLayer(ModBlocks.OATS.get(), RenderType.getCutout());
         });
     }
 

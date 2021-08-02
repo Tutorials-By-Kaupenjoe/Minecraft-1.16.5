@@ -7,6 +7,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.tutorialsbykaupenjoe.tutorialmod.TutorialMod;
+import net.tutorialsbykaupenjoe.tutorialmod.block.ModBlocks;
 import net.tutorialsbykaupenjoe.tutorialmod.item.custom.Firestone;
 
 public class ModItems {
@@ -59,7 +60,12 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.HEAD,
                     new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP)));
 
-    
+
+    public static final RegistryObject<Item> OATS = ITEMS.register("oats",
+            () -> new BlockItem(ModBlocks.OATS.get(), new Item.Properties()
+                    .food(new Food.Builder().hunger(1).saturation(0.1f).fastToEat().build())
+                    .group(ModItemGroup.TUTORIAL_GROUP)));
+
 
 
 

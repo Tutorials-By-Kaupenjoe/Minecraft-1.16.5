@@ -11,6 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.tutorialsbykaupenjoe.tutorialmod.TutorialMod;
 import net.tutorialsbykaupenjoe.tutorialmod.block.custom.FirestoneBlock;
+import net.tutorialsbykaupenjoe.tutorialmod.block.custom.OatsBlock;
 import net.tutorialsbykaupenjoe.tutorialmod.item.ModItemGroup;
 import net.tutorialsbykaupenjoe.tutorialmod.item.ModItems;
 import net.tutorialsbykaupenjoe.tutorialmod.item.custom.Firestone;
@@ -67,7 +68,8 @@ public class ModBlocks {
             () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.IRON).harvestLevel(2).setRequiresTool()
                     .harvestTool(ToolType.PICKAXE).hardnessAndResistance(6f).notSolid()));
 
-
+    public static final RegistryObject<Block> OATS = BLOCKS.register("oats_crop",
+            () -> new OatsBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
 
 
 
