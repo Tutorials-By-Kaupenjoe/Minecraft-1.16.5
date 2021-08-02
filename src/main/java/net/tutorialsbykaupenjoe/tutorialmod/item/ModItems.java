@@ -1,5 +1,6 @@
 package net.tutorialsbykaupenjoe.tutorialmod.item;
 
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.RegistryObject;
@@ -42,7 +43,23 @@ public class ModItems {
                     new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP)));
 
 
+    public static final RegistryObject<Item> AMETHYST_BOOTS = ITEMS.register("amethyst_boots",
+            () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.FEET,
+                    new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP)));
 
+    public static final RegistryObject<Item> AMETHYST_CHESTPLATE = ITEMS.register("amethyst_chestplate",
+            () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.CHEST,
+                    new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP)));
+
+    public static final RegistryObject<Item> AMETHYST_LEGGINGS = ITEMS.register("amethyst_leggings",
+            () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.LEGS,
+                    new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP)));
+
+    public static final RegistryObject<Item> AMETHYST_HELMET = ITEMS.register("amethyst_helmet",
+            () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.HEAD,
+                    new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP)));
+
+    
 
 
 
