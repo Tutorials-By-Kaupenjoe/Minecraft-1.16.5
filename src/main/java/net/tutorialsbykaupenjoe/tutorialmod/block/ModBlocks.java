@@ -59,6 +59,14 @@ public class ModBlocks {
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, AbstractBlock.Properties.create(Material.IRON)
                     .harvestLevel(2).setRequiresTool().harvestTool(ToolType.PICKAXE).hardnessAndResistance(6f)));
 
+    public static final RegistryObject<Block> AMETHYST_DOOR = registerBlock("amethyst_door",
+            () -> new DoorBlock(AbstractBlock.Properties.create(Material.IRON).harvestLevel(2).setRequiresTool()
+                    .harvestTool(ToolType.PICKAXE).hardnessAndResistance(6f).notSolid()));
+
+    public static final RegistryObject<Block> AMETHYST_TRAPDOOR = registerBlock("amethyst_trapdoor",
+            () -> new TrapDoorBlock(AbstractBlock.Properties.create(Material.IRON).harvestLevel(2).setRequiresTool()
+                    .harvestTool(ToolType.PICKAXE).hardnessAndResistance(6f).notSolid()));
+
 
 
 

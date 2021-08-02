@@ -19,6 +19,8 @@
   "block.tutorialmod.amethyst_slab": "Amethyst Slab",
   "block.tutorialmod.amethyst_button": "Amethyst Button",
   "block.tutorialmod.amethyst_pressure_plate": "Amethyst Pressure Plate",
+  "block.tutorialmod.amethyst_door": "Amethyst Door",
+  "block.tutorialmod.amethyst_trapdoor": "Amethyst Trapdoor",
   "itemGroup.tutorialModTab": "Tutorial Mod",
   "tooltip.tutorialmod.firestone": "Hold \u00A7eSHIFT\u00A7r for more Information!",
   "tooltip.tutorialmod.firestone_shift": "Might set you on fire. But also might protect from it!"
