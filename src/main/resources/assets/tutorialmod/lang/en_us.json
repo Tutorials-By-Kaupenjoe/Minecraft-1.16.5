@@ -22,6 +22,11 @@
   "block.tutorialmod.amethyst_door": "Amethyst Door",
   "block.tutorialmod.amethyst_trapdoor": "Amethyst Trapdoor",
   "block.tutorialmod.oats_crop": "Oats",
+  "block.tutorialmod.redwood_log": "Redwood Log",
+  "block.tutorialmod.redwood_planks": "Redwood Planks",
+  "block.tutorialmod.redwood_wood": "Redwood Wood",
+  "block.tutorialmod.stripped_redwood_log": "Stripped Redwood Log",
+  "block.tutorialmod.stripped_redwood_wood": "Stripped Redwood Wood",
   "itemGroup.tutorialModTab": "Tutorial Mod",
   "tooltip.tutorialmod.firestone": "Hold \u00A7eSHIFT\u00A7r for more Information!",
   "tooltip.tutorialmod.firestone_shift": "Might set you on fire. But also might protect from it!"

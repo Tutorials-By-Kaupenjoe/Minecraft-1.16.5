@@ -12,6 +12,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.tutorialsbykaupenjoe.tutorialmod.TutorialMod;
 import net.tutorialsbykaupenjoe.tutorialmod.block.custom.FirestoneBlock;
 import net.tutorialsbykaupenjoe.tutorialmod.block.custom.OatsBlock;
+import net.tutorialsbykaupenjoe.tutorialmod.block.custom.RedwoodLog;
+import net.tutorialsbykaupenjoe.tutorialmod.block.custom.RedwoodWood;
 import net.tutorialsbykaupenjoe.tutorialmod.item.ModItemGroup;
 import net.tutorialsbykaupenjoe.tutorialmod.item.ModItems;
 import net.tutorialsbykaupenjoe.tutorialmod.item.custom.Firestone;
@@ -70,6 +72,22 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> OATS = BLOCKS.register("oats_crop",
             () -> new OatsBlock(AbstractBlock.Properties.from(Blocks.WHEAT)));
+
+
+    public static final RegistryObject<Block> REDWOOD_LOG = registerBlock("redwood_log",
+            () -> new RedwoodLog(AbstractBlock.Properties.from(Blocks.OAK_LOG)));
+
+    public static final RegistryObject<Block> REDWOOD_WOOD = registerBlock("redwood_wood",
+            () -> new RedwoodWood(AbstractBlock.Properties.from(Blocks.OAK_WOOD)));
+
+    public static final RegistryObject<Block> STRIPPED_REDWOOD_LOG = registerBlock("stripped_redwood_log",
+            () -> new RotatedPillarBlock(AbstractBlock.Properties.from(Blocks.STRIPPED_OAK_LOG)));
+
+    public static final RegistryObject<Block> STRIPPED_REDWOOD_WOOD = registerBlock("stripped_redwood_wood",
+            () -> new RotatedPillarBlock(AbstractBlock.Properties.from(Blocks.STRIPPED_OAK_WOOD)));
+
+    public static final RegistryObject<Block> REDWOOD_PLANKS = registerBlock("redwood_planks",
+            () -> new Block(AbstractBlock.Properties.from(Blocks.OAK_PLANKS)));
 
 
 
