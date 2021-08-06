@@ -27,6 +27,8 @@
   "block.tutorialmod.redwood_wood": "Redwood Wood",
   "block.tutorialmod.stripped_redwood_log": "Stripped Redwood Log",
   "block.tutorialmod.stripped_redwood_wood": "Stripped Redwood Wood",
+  "block.tutorialmod.redwood_sapling": "Redwood Sapling",
+  "block.tutorialmod.redwood_leaves": "Redwood Leaves",
   "itemGroup.tutorialModTab": "Tutorial Mod",
   "tooltip.tutorialmod.firestone": "Hold \u00A7eSHIFT\u00A7r for more Information!",
   "tooltip.tutorialmod.firestone_shift": "Might set you on fire. But also might protect from it!"
