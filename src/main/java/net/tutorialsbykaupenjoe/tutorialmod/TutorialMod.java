@@ -66,9 +66,6 @@ public class TutorialMod {
             RenderTypeLookup.setRenderLayer(ModBlocks.AMETHYST_TRAPDOOR.get(), RenderType.getCutout());
 
             RenderTypeLookup.setRenderLayer(ModBlocks.OATS.get(), RenderType.getCutout());
-
-            RenderTypeLookup.setRenderLayer(ModBlocks.REDWOOD_LEAVES.get(), RenderType.getCutout());
-            RenderTypeLookup.setRenderLayer(ModBlocks.REDWOOD_SAPLING.get(), RenderType.getCutout());
         });
     }
 
