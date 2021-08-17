@@ -13,6 +13,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.tutorialsbykaupenjoe.tutorialmod.TutorialMod;
 import net.tutorialsbykaupenjoe.tutorialmod.block.custom.FirestoneBlock;
 import net.tutorialsbykaupenjoe.tutorialmod.block.custom.OatsBlock;
+import net.tutorialsbykaupenjoe.tutorialmod.block.custom.trees.RedwoodTree;
 import net.tutorialsbykaupenjoe.tutorialmod.item.ModItemGroup;
 import net.tutorialsbykaupenjoe.tutorialmod.item.ModItems;
 
@@ -86,6 +87,14 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> REDWOOD_PLANKS = registerBlock("redwood_planks",
             () -> new Block(AbstractBlock.Properties.from(Blocks.OAK_PLANKS)));
+
+
+    public static final RegistryObject<Block> REDWOOD_LEAVES = registerBlock("redwood_leaves",
+            () -> new LeavesBlock(AbstractBlock.Properties.create(Material.LEAVES).hardnessAndResistance(0.2f)
+                .tickRandomly().sound(SoundType.PLANT).notSolid()));
+
+    public static final RegistryObject<Block> REDWOOD_SAPLING = registerBlock("redwood_sapling",
+            () -> new SaplingBlock(new RedwoodTree(), AbstractBlock.Properties.from(Blocks.OAK_SAPLING)));
 
 
 
