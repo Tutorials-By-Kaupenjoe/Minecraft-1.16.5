@@ -31,6 +31,8 @@
   "block.tutorialmod.redwood_sapling": "Redwood Sapling",
   "block.tutorialmod.redwood_leaves": "Redwood Leaves",
   "block.tutorialmod.hyacinth": "Hyacinth",
+  "block.tutorialmod.lightning_channeler": "Lightning Channeler",
+  "screen.tutorialmod.lightning_channeler": "Lightning Channeler",
   "itemGroup.tutorialModTab": "Tutorial Mod",
   "tooltip.tutorialmod.firestone": "Hold \u00A7eSHIFT\u00A7r for more Information!",
   "tooltip.tutorialmod.firestone_shift": "Might set you on fire. But also might protect from it!"

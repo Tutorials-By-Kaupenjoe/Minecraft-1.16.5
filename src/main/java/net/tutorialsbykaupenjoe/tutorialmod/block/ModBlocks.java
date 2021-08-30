@@ -12,6 +12,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.tutorialsbykaupenjoe.tutorialmod.TutorialMod;
 import net.tutorialsbykaupenjoe.tutorialmod.block.custom.FirestoneBlock;
+import net.tutorialsbykaupenjoe.tutorialmod.block.custom.LightningChannelerBlock;
 import net.tutorialsbykaupenjoe.tutorialmod.block.custom.OatsBlock;
 import net.tutorialsbykaupenjoe.tutorialmod.block.custom.trees.RedwoodTree;
 import net.tutorialsbykaupenjoe.tutorialmod.item.ModItemGroup;
@@ -98,6 +99,10 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> HYACINTH = registerBlock("hyacinth",
             () -> new FlowerBlock(Effects.HASTE, 2, AbstractBlock.Properties.from(Blocks.DANDELION)));
+
+    public static final RegistryObject<Block> LIGHTNING_CHANNELER = registerBlock("lightning_channeler",
+            () -> new LightningChannelerBlock(AbstractBlock.Properties.create(Material.IRON)));
+
 
 
 
