@@ -24,6 +24,7 @@ import net.tutorialsbykaupenjoe.tutorialmod.container.ModContainers;
 import net.tutorialsbykaupenjoe.tutorialmod.item.ModItems;
 import net.tutorialsbykaupenjoe.tutorialmod.screen.LightningChannelerScreen;
 import net.tutorialsbykaupenjoe.tutorialmod.tileentity.ModTileEntities;
+import net.tutorialsbykaupenjoe.tutorialmod.world.structure.ModStructures;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -44,6 +45,8 @@ public class TutorialMod {
         ModTileEntities.register(eventBus);
         ModContainers.register(eventBus);
 
+        ModStructures.register(eventBus);
+
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
         eventBus.addListener(this::enqueueIMC);
@@ -61,6 +64,8 @@ public class TutorialMod {
             AxeItem.BLOCK_STRIPPING_MAP = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.BLOCK_STRIPPING_MAP)
                     .put(ModBlocks.REDWOOD_LOG.get(), ModBlocks.STRIPPED_REDWOOD_LOG.get())
                     .put(ModBlocks.REDWOOD_WOOD.get(), ModBlocks.STRIPPED_REDWOOD_WOOD.get()).build();
+
+            ModStructures.setupStructures();
         });
     }
 
