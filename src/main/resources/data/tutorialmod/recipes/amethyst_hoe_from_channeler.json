@@ -1,0 +1,15 @@
+{
+  "type": "tutorialmod:lightning",
+  "weather": "clear",
+  "ingredients": [
+    {
+      "item": "tutorialmod:amethyst"
+    },
+    {
+      "item": "minecraft:stick"
+    }
+  ],
+  "output": {
+    "item": "tutorialmod:amethyst_hoe"
+  }
+}

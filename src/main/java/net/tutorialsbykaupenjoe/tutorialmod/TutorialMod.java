@@ -26,6 +26,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.tutorialsbykaupenjoe.tutorialmod.block.ModBlocks;
 import net.tutorialsbykaupenjoe.tutorialmod.block.ModWoodTypes;
 import net.tutorialsbykaupenjoe.tutorialmod.container.ModContainers;
+import net.tutorialsbykaupenjoe.tutorialmod.data.recipes.ModRecipeTypes;
 import net.tutorialsbykaupenjoe.tutorialmod.fluid.ModFluids;
 import net.tutorialsbykaupenjoe.tutorialmod.item.ModItems;
 import net.tutorialsbykaupenjoe.tutorialmod.screen.LightningChannelerScreen;
@@ -53,6 +54,7 @@ public class TutorialMod {
 
         ModStructures.register(eventBus);
         ModFluids.register(eventBus);
+        ModRecipeTypes.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading

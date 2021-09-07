@@ -1,0 +1,15 @@
+{
+  "type": "tutorialmod:lightning",
+  "weather": "thundering",
+  "ingredients": [
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "tutorialmod:amethyst"
+    }
+  ],
+  "output": {
+    "item": "tutorialmod:firestone"
+  }
+}
