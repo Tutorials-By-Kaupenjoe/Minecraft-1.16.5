@@ -26,6 +26,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.tutorialsbykaupenjoe.tutorialmod.block.ModBlocks;
 import net.tutorialsbykaupenjoe.tutorialmod.block.ModWoodTypes;
 import net.tutorialsbykaupenjoe.tutorialmod.container.ModContainers;
+import net.tutorialsbykaupenjoe.tutorialmod.fluid.ModFluids;
 import net.tutorialsbykaupenjoe.tutorialmod.item.ModItems;
 import net.tutorialsbykaupenjoe.tutorialmod.screen.LightningChannelerScreen;
 import net.tutorialsbykaupenjoe.tutorialmod.tileentity.ModTileEntities;
@@ -51,6 +52,7 @@ public class TutorialMod {
         ModContainers.register(eventBus);
 
         ModStructures.register(eventBus);
+        ModFluids.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -93,6 +95,10 @@ public class TutorialMod {
             ClientRegistry.bindTileEntityRenderer(ModTileEntities.SIGN_TILE_ENTITIES.get(),
                     SignTileEntityRenderer::new);
             Atlases.addWoodType(ModWoodTypes.REDWOOD);
+
+            RenderTypeLookup.setRenderLayer(ModFluids.OIL_FLUID.get(), RenderType.getTranslucent());
+            RenderTypeLookup.setRenderLayer(ModFluids.OIL_BLOCK.get(), RenderType.getTranslucent());
+            RenderTypeLookup.setRenderLayer(ModFluids.OIL_FLOWING.get(), RenderType.getTranslucent());
         });
     }
 

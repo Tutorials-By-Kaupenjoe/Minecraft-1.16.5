@@ -8,6 +8,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.tutorialsbykaupenjoe.tutorialmod.TutorialMod;
 import net.tutorialsbykaupenjoe.tutorialmod.block.ModBlocks;
+import net.tutorialsbykaupenjoe.tutorialmod.fluid.ModFluids;
 import net.tutorialsbykaupenjoe.tutorialmod.item.custom.Firestone;
 
 public class ModItems {
@@ -73,6 +74,11 @@ public class ModItems {
     public static final RegistryObject<Item> REDWOOD_SIGN = ITEMS.register("redwood_sign",
             () -> new SignItem(new Item.Properties().maxStackSize(16).group(ModItemGroup.TUTORIAL_GROUP),
                     ModBlocks.REDWOOD_SIGN.get(), ModBlocks.REDWOOD_WALL_SIGN.get()));
+
+
+    public static final RegistryObject<Item> OIL_BUCKET = ITEMS.register("oil_bucket",
+            () -> new BucketItem(() -> ModFluids.OIL_FLUID.get(),
+                    new Item.Properties().maxStackSize(1).group(ModItemGroup.TUTORIAL_GROUP)));
 
 
 
