@@ -5,9 +5,11 @@ import net.minecraft.block.AbstractFireBlock;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.CampfireBlock;
+import net.minecraft.client.entity.player.AbstractClientPlayerEntity;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.Item;
@@ -22,12 +24,13 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 import net.tutorialsbykaupenjoe.tutorialmod.util.TutorialTags;
+import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
 import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Objects;
 
-public class Firestone extends Item {
+public class Firestone extends Item implements ICurioItem {
     public Firestone(Properties properties) {
         super(properties);
     }
@@ -45,6 +48,26 @@ public class Firestone extends Item {
         }
 
         return super.onItemUseFirst(stack, context);
+    }
+
+    @Override
+    public void curioTick(String identifier, int index, LivingEntity livingEntity, ItemStack stack) {
+        PlayerEntity player = (PlayerEntity)livingEntity;
+
+        if(!livingEntity.world.isRemote()) {
+            boolean hasPlayerFireResistance =
+                    !Objects.equals(player.getActivePotionEffect(Effects.FIRE_RESISTANCE), null);
+
+            if(!hasPlayerFireResistance) {
+                player.addPotionEffect(new EffectInstance(Effects.FIRE_RESISTANCE, 200));
+
+                if(random.nextFloat() > 0.6f) {
+                    stack.attemptDamageItem(1, random, ((ServerPlayerEntity) player));
+                }
+            }
+        }
+
+        ICurioItem.super.curioTick(identifier, index, livingEntity, stack);
     }
 
     @Override
