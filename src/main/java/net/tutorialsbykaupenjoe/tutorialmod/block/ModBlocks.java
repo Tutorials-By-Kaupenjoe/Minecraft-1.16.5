@@ -11,9 +11,7 @@ import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.tutorialsbykaupenjoe.tutorialmod.TutorialMod;
-import net.tutorialsbykaupenjoe.tutorialmod.block.custom.FirestoneBlock;
-import net.tutorialsbykaupenjoe.tutorialmod.block.custom.LightningChannelerBlock;
-import net.tutorialsbykaupenjoe.tutorialmod.block.custom.OatsBlock;
+import net.tutorialsbykaupenjoe.tutorialmod.block.custom.*;
 import net.tutorialsbykaupenjoe.tutorialmod.block.custom.trees.RedwoodTree;
 import net.tutorialsbykaupenjoe.tutorialmod.item.ModItemGroup;
 import net.tutorialsbykaupenjoe.tutorialmod.item.ModItems;
@@ -102,6 +100,12 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> LIGHTNING_CHANNELER = registerBlock("lightning_channeler",
             () -> new LightningChannelerBlock(AbstractBlock.Properties.create(Material.IRON)));
+
+    public static final RegistryObject<Block> REDWOOD_SIGN = BLOCKS.register("redwood_sign",
+            () -> new ModStandingSignBlock(AbstractBlock.Properties.create(Material.IRON), ModWoodTypes.REDWOOD));
+
+    public static final RegistryObject<Block> REDWOOD_WALL_SIGN = BLOCKS.register("redwood_wall_sign",
+            () -> new ModWallSignBlock(AbstractBlock.Properties.create(Material.IRON), ModWoodTypes.REDWOOD));
 
 
 
