@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "tutorialmod:firestone"
+    },
+    "title": "Fiery Hot",
+    "description": "Get a hold of a Firestone! ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "minecraft:adventure/shoot_arrow",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "tutorialmod:firestone"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
