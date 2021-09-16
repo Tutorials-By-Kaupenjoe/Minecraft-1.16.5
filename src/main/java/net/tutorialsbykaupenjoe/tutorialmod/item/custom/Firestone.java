@@ -24,6 +24,8 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
 import net.tutorialsbykaupenjoe.tutorialmod.util.TutorialTags;
+import top.theillusivec4.curios.api.CuriosApi;
+import top.theillusivec4.curios.api.SlotTypePreset;
 import top.theillusivec4.curios.api.type.capability.ICurioItem;
 
 import javax.annotation.Nullable;
@@ -52,9 +54,9 @@ public class Firestone extends Item implements ICurioItem {
 
     @Override
     public void curioTick(String identifier, int index, LivingEntity livingEntity, ItemStack stack) {
-        PlayerEntity player = (PlayerEntity)livingEntity;
+        PlayerEntity player = (PlayerEntity) livingEntity;
 
-        if(!livingEntity.world.isRemote()) {
+        if(!player.world.isRemote()) {
             boolean hasPlayerFireResistance =
                     !Objects.equals(player.getActivePotionEffect(Effects.FIRE_RESISTANCE), null);
 
@@ -62,7 +64,8 @@ public class Firestone extends Item implements ICurioItem {
                 player.addPotionEffect(new EffectInstance(Effects.FIRE_RESISTANCE, 200));
 
                 if(random.nextFloat() > 0.6f) {
-                    stack.attemptDamageItem(1, random, ((ServerPlayerEntity) player));
+                    stack.damageItem(1, player, p -> CuriosApi.getCuriosHelper().onBrokenCurio(
+                            SlotTypePreset.CHARM.getIdentifier(), index, p));
                 }
             }
         }
