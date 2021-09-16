@@ -8,10 +8,12 @@ import net.minecraft.particles.BlockParticleData;
 import net.minecraft.particles.ParticleTypes;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.Hand;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.world.World;
 import net.tutorialsbykaupenjoe.tutorialmod.item.custom.Firestone;
+import net.tutorialsbykaupenjoe.tutorialmod.util.ModSoundEvents;
 
 import java.util.Random;
 
@@ -27,6 +29,8 @@ public class FirestoneBlock extends Block {
         if(!worldIn.isRemote()) {
             if(handIn == Hand.MAIN_HAND) {
                 System.out.println("I right-clicked a FirestoneBlock. Called for the Main Hand!");
+                worldIn.playSound(null, pos, ModSoundEvents.SMALL_EXPLOSION.get()
+                        , SoundCategory.BLOCKS, 1, 1);
             }
             if(handIn == Hand.OFF_HAND) {
                 System.out.println("I right-clicked a FirestoneBlock. Called for the Off Hand!");

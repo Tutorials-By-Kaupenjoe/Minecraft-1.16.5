@@ -31,6 +31,7 @@ import net.tutorialsbykaupenjoe.tutorialmod.fluid.ModFluids;
 import net.tutorialsbykaupenjoe.tutorialmod.item.ModItems;
 import net.tutorialsbykaupenjoe.tutorialmod.screen.LightningChannelerScreen;
 import net.tutorialsbykaupenjoe.tutorialmod.tileentity.ModTileEntities;
+import net.tutorialsbykaupenjoe.tutorialmod.util.ModSoundEvents;
 import net.tutorialsbykaupenjoe.tutorialmod.world.structure.ModStructures;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -57,6 +58,7 @@ public class TutorialMod {
         ModStructures.register(eventBus);
         ModFluids.register(eventBus);
         ModRecipeTypes.register(eventBus);
+        ModSoundEvents.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
