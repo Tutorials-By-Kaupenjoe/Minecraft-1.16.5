@@ -36,6 +36,8 @@ import net.tutorialsbykaupenjoe.tutorialmod.item.ModItems;
 import net.tutorialsbykaupenjoe.tutorialmod.screen.LightningChannelerScreen;
 import net.tutorialsbykaupenjoe.tutorialmod.tileentity.ModTileEntities;
 import net.tutorialsbykaupenjoe.tutorialmod.util.ModSoundEvents;
+import net.tutorialsbykaupenjoe.tutorialmod.world.biome.ModBiomes;
+import net.tutorialsbykaupenjoe.tutorialmod.world.gen.ModBiomeGeneration;
 import net.tutorialsbykaupenjoe.tutorialmod.world.structure.ModStructures;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -65,6 +67,7 @@ public class TutorialMod {
         ModSoundEvents.register(eventBus);
 
         ModEntityTypes.register(eventBus);
+        ModBiomes.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
@@ -86,6 +89,8 @@ public class TutorialMod {
 
             ModStructures.setupStructures();
             WoodType.register(ModWoodTypes.REDWOOD);
+
+            ModBiomeGeneration.generateBiomes();
         });
     }
 
