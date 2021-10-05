@@ -8,8 +8,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.tutorialsbykaupenjoe.tutorialmod.TutorialMod;
 import net.tutorialsbykaupenjoe.tutorialmod.block.ModBlocks;
+import net.tutorialsbykaupenjoe.tutorialmod.entity.ModEntityTypes;
 import net.tutorialsbykaupenjoe.tutorialmod.fluid.ModFluids;
 import net.tutorialsbykaupenjoe.tutorialmod.item.custom.Firestone;
+import net.tutorialsbykaupenjoe.tutorialmod.item.custom.ModSpawnEggItem;
 
 public class ModItems {
 
@@ -79,6 +81,14 @@ public class ModItems {
     public static final RegistryObject<Item> OIL_BUCKET = ITEMS.register("oil_bucket",
             () -> new BucketItem(() -> ModFluids.OIL_FLUID.get(),
                     new Item.Properties().maxStackSize(1).group(ModItemGroup.TUTORIAL_GROUP)));
+
+    public static final RegistryObject<ModSpawnEggItem> BUFF_ZOMBIE_SPAWN_EGG = ITEMS.register("buff_zombie_spawn_egg",
+            () -> new ModSpawnEggItem(ModEntityTypes.BUFF_ZOMBIE, 0x464F56, 0x1D6336,
+                    new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP)));
+
+    public static final RegistryObject<ModSpawnEggItem> PIGEON_SPAWN_EGG = ITEMS.register("pigeon_spawn_egg",
+            () -> new ModSpawnEggItem(ModEntityTypes.PIGEON, 0x879995, 0x576ABC,
+                    new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP)));
 
 
 

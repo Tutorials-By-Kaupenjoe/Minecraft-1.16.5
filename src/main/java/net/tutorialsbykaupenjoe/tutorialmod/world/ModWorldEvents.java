@@ -16,10 +16,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.tutorialsbykaupenjoe.tutorialmod.TutorialMod;
-import net.tutorialsbykaupenjoe.tutorialmod.world.gen.ModFlowerGeneration;
-import net.tutorialsbykaupenjoe.tutorialmod.world.gen.ModOreGeneration;
-import net.tutorialsbykaupenjoe.tutorialmod.world.gen.ModStructureGeneration;
-import net.tutorialsbykaupenjoe.tutorialmod.world.gen.ModTreeGeneration;
+import net.tutorialsbykaupenjoe.tutorialmod.world.gen.*;
 import net.tutorialsbykaupenjoe.tutorialmod.world.structure.ModStructures;
 import org.apache.logging.log4j.LogManager;
 
@@ -37,6 +34,8 @@ public class ModWorldEvents {
         ModOreGeneration.generateOres(event);
         ModFlowerGeneration.generateFlowers(event);
         ModTreeGeneration.generateTrees(event);
+
+        ModEntityGeneration.onEntitySpawn(event);
     }
 
     @SubscribeEvent
