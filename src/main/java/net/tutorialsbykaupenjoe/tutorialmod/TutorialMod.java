@@ -35,6 +35,7 @@ import net.tutorialsbykaupenjoe.tutorialmod.fluid.ModFluids;
 import net.tutorialsbykaupenjoe.tutorialmod.item.ModItems;
 import net.tutorialsbykaupenjoe.tutorialmod.screen.LightningChannelerScreen;
 import net.tutorialsbykaupenjoe.tutorialmod.tileentity.ModTileEntities;
+import net.tutorialsbykaupenjoe.tutorialmod.util.ModItemModelProperties;
 import net.tutorialsbykaupenjoe.tutorialmod.util.ModSoundEvents;
 import net.tutorialsbykaupenjoe.tutorialmod.world.biome.ModBiomes;
 import net.tutorialsbykaupenjoe.tutorialmod.world.gen.ModBiomeGeneration;
@@ -116,6 +117,8 @@ public class TutorialMod {
             RenderTypeLookup.setRenderLayer(ModFluids.OIL_FLUID.get(), RenderType.getTranslucent());
             RenderTypeLookup.setRenderLayer(ModFluids.OIL_BLOCK.get(), RenderType.getTranslucent());
             RenderTypeLookup.setRenderLayer(ModFluids.OIL_FLOWING.get(), RenderType.getTranslucent());
+
+            ModItemModelProperties.makeBow(ModItems.KAUPENBOW.get());
         });
 
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.BUFF_ZOMBIE.get(), BuffZombieRenderer::new);
