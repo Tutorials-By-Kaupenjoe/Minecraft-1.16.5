@@ -1,3 +1,6 @@
+Entities were provided by Feroov (FRV):
+https://www.twitch.tv/feroov
+
 ModStructures, HouseStructure as well as the addDimensionalSpacing method in ModWorldEvents
 are slightly modified versions of https://github.com/TelepathicGrunt/StructureTutorialMod
 that is distributed under the MIT-License:
