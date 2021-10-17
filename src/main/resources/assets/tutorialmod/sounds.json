@@ -5,5 +5,13 @@
     "sounds": [
       "tutorialmod:small_explosion"
     ]
+  },
+  "example_music_disc": {
+    "sounds": [
+      {
+        "name": "tutorialmod:small_explosion",
+        "stream": true
+      }
+    ]
   }
 }

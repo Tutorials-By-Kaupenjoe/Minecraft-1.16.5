@@ -95,6 +95,8 @@ public class ModItems {
             () -> new BowItem(new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP).maxStackSize(1)));
 
 
+    public static final RegistryObject<Item> EXAMPLE_MUSIC_DISC = ITEMS.register("example_music_disc",
+            () -> new MusicDiscItem(16, ModSoundEvents.EXAMPLE_MUSIC_DISC, new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP).maxStackSize(1).rarity(Rarity.RARE)));
 
 
     public static void register(IEventBus eventBus) {

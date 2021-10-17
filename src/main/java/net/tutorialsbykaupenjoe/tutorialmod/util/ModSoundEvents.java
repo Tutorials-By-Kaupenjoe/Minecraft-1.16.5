@@ -15,6 +15,9 @@ public class ModSoundEvents {
     public static final RegistryObject<SoundEvent> SMALL_EXPLOSION =
             registerSoundEvent("small_explosion");
 
+    public static final RegistryObject<SoundEvent> EXAMPLE_MUSIC_DISC =
+            registerSoundEvent("example_music_disc");
+
     private static RegistryObject<SoundEvent> registerSoundEvent(String name) {
         return SOUND_EVENTS.register(name, () -> new SoundEvent(new ResourceLocation(TutorialMod.MOD_ID, name)));
     }

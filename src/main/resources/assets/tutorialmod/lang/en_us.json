@@ -16,6 +16,8 @@
   "item.tutorialmod.buff_zombie_spawn_egg": "Buff Zombie Spawn Egg",
   "item.tutorialmod.pigeon_spawn_egg": "Pigeon Spawn Egg",
   "item.tutorialmod.kaupenbow": "Kaupenbow",
+  "item.tutorialmod.example_music_disc": "Music Disc",
+  "item.tutorialmod.example_music_disc.desc": "Description of Example Music Disc",
   "block.tutorialmod.amethyst_ore": "Amethyst Ore",
   "block.tutorialmod.amethyst_block": "Amethyst Block",
   "block.tutorialmod.firestone_block": "Firestone Block",
