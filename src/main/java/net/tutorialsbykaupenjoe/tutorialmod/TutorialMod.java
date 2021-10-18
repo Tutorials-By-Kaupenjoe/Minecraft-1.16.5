@@ -4,7 +4,6 @@ import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.Block;
 import net.minecraft.block.WoodType;
 import net.minecraft.client.gui.ScreenManager;
-import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.renderer.Atlases;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
@@ -42,6 +41,7 @@ import net.tutorialsbykaupenjoe.tutorialmod.tileentity.ModTileEntities;
 import net.tutorialsbykaupenjoe.tutorialmod.util.ModItemModelProperties;
 import net.tutorialsbykaupenjoe.tutorialmod.util.ModSoundEvents;
 import net.tutorialsbykaupenjoe.tutorialmod.world.biome.ModBiomes;
+import net.tutorialsbykaupenjoe.tutorialmod.world.biome.ModBiomesDatapack;
 import net.tutorialsbykaupenjoe.tutorialmod.world.gen.ModBiomeGeneration;
 import net.tutorialsbykaupenjoe.tutorialmod.world.structure.ModStructures;
 import org.apache.logging.log4j.LogManager;
@@ -73,6 +73,7 @@ public class TutorialMod {
 
         ModEntityTypes.register(eventBus);
         ModBiomes.register(eventBus);
+        ModBiomesDatapack.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
