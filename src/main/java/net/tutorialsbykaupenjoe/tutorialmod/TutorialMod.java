@@ -9,7 +9,11 @@ import net.minecraft.client.renderer.Atlases;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.tileentity.SignTileEntityRenderer;
+import net.minecraft.entity.EntitySpawnPlacementRegistry;
+import net.minecraft.entity.monster.MonsterEntity;
+import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.item.AxeItem;
+import net.minecraft.world.gen.Heightmap;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -92,6 +96,11 @@ public class TutorialMod {
             WoodType.register(ModWoodTypes.REDWOOD);
 
             ModBiomeGeneration.generateBiomes();
+
+            EntitySpawnPlacementRegistry.register(ModEntityTypes.BUFF_ZOMBIE.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND,
+                    Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, MonsterEntity::canMonsterSpawn);
+            EntitySpawnPlacementRegistry.register(ModEntityTypes.PIGEON.get(), EntitySpawnPlacementRegistry.PlacementType.ON_GROUND,
+                    Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, AnimalEntity::canAnimalSpawn);
         });
     }
 

@@ -14,9 +14,10 @@ import java.util.List;
 
 public class ModEntityGeneration {
     public static void onEntitySpawn(final BiomeLoadingEvent event) {
-        addEntityToAllBiomes(event.getSpawns(), ModEntityTypes.BUFF_ZOMBIE.get(), 40, 2, 4);
-        addEntityToAllBiomesExceptThese(event, ModEntityTypes.PIGEON.get(), 50, 4, 10,
-                Biomes.PLAINS, Biomes.BEACH, Biomes.BIRCH_FOREST);
+        addEntityToAllOverworldBiomes(event, ModEntityTypes.BUFF_ZOMBIE.get(),
+                40, 2, 4);
+        addEntityToAllBiomesExceptThese(event, ModEntityTypes.PIGEON.get(),
+                50, 4, 12, Biomes.PLAINS, Biomes.BEACH);
     }
 
     private static void addEntityToAllBiomesExceptThese(BiomeLoadingEvent event, EntityType<?> type,
@@ -26,7 +27,7 @@ public class ModEntityGeneration {
                 .map(Object::toString).anyMatch(s -> s.equals(event.getName().toString()));
 
         if(!isBiomeSelected) {
-            addEntityToAllBiomes(event.getSpawns(), type, weight, minCount, maxCount);
+            addEntityToAllBiomes(event, type, weight, minCount, maxCount);
         }
     }
 
@@ -37,13 +38,37 @@ public class ModEntityGeneration {
                 .map(Object::toString).anyMatch(s -> s.equals(event.getName().toString()));
 
         if(isBiomeSelected) {
-            addEntityToAllBiomes(event.getSpawns(), type, weight, minCount, maxCount);
+            addEntityToAllBiomes(event, type, weight, minCount, maxCount);
         }
     }
 
-    private static void addEntityToAllBiomes(MobSpawnInfoBuilder spawns, EntityType<?> type,
+    private static void addEntityToAllOverworldBiomes(BiomeLoadingEvent event, EntityType<?> type,
+                                                      int weight, int minCount, int maxCount) {
+        if(!event.getCategory().equals(Biome.Category.THEEND) && !event.getCategory().equals(Biome.Category.NETHER)) {
+            List<MobSpawnInfo.Spawners> base = event.getSpawns().getSpawner(type.getClassification());
+            base.add(new MobSpawnInfo.Spawners(type,weight, minCount, maxCount));
+        }
+    }
+
+    private static void addEntityToAllBiomesNoNether(BiomeLoadingEvent event, EntityType<?> type,
+                                                     int weight, int minCount, int maxCount) {
+        if(!event.getCategory().equals(Biome.Category.NETHER)) {
+            List<MobSpawnInfo.Spawners> base = event.getSpawns().getSpawner(type.getClassification());
+            base.add(new MobSpawnInfo.Spawners(type,weight, minCount, maxCount));
+        }
+    }
+
+    private static void addEntityToAllBiomesNoEnd(BiomeLoadingEvent event, EntityType<?> type,
+                                                  int weight, int minCount, int maxCount) {
+        if(!event.getCategory().equals(Biome.Category.THEEND)) {
+            List<MobSpawnInfo.Spawners> base = event.getSpawns().getSpawner(type.getClassification());
+            base.add(new MobSpawnInfo.Spawners(type,weight, minCount, maxCount));
+        }
+    }
+
+    private static void addEntityToAllBiomes(BiomeLoadingEvent event, EntityType<?> type,
                                              int weight, int minCount, int maxCount) {
-        List<MobSpawnInfo.Spawners> base = spawns.getSpawner(type.getClassification());
+        List<MobSpawnInfo.Spawners> base = event.getSpawns().getSpawner(type.getClassification());
         base.add(new MobSpawnInfo.Spawners(type,weight, minCount, maxCount));
     }
 }
