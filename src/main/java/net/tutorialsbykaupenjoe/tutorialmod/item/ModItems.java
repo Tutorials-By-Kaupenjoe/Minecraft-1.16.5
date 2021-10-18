@@ -94,6 +94,9 @@ public class ModItems {
     public static final RegistryObject<Item> KAUPENBOW = ITEMS.register("kaupenbow",
             () -> new BowItem(new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP).maxStackSize(1)));
 
+    public static final RegistryObject<Item> KAUPENSTAFF = ITEMS.register("kaupen_staff",
+            () -> new Item(new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP).maxStackSize(1)));
+
 
 
 

@@ -108,6 +108,8 @@ public class ModBlocks {
             () -> new ModWallSignBlock(AbstractBlock.Properties.create(Material.IRON), ModWoodTypes.REDWOOD));
 
 
+    public static final RegistryObject<Block> KAUPEN_ALTAR = registerBlock("kaupen_altar",
+            () -> new KaupenAltarBlock(AbstractBlock.Properties.create(Material.IRON).notSolid()));
 
 
 
