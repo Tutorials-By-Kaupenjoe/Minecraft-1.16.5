@@ -7,6 +7,10 @@ https://www.twitch.tv/feroov
 KaupenStaff Model made by Nitroncat:
 https://www.youtube.com/c/nitroncat/
 
+Bar Brawl Music from:
+https://freepd.com/upbeat.php
+Written by Bryan Teoh.
+
 ModStructures, HouseStructure as well as the addDimensionalSpacing method in ModWorldEvents
 are slightly modified versions of https://github.com/TelepathicGrunt/StructureTutorialMod
 that is distributed under the MIT-License:
