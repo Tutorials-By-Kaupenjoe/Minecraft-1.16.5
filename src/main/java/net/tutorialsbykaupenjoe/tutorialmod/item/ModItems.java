@@ -12,6 +12,7 @@ import net.tutorialsbykaupenjoe.tutorialmod.entity.ModEntityTypes;
 import net.tutorialsbykaupenjoe.tutorialmod.fluid.ModFluids;
 import net.tutorialsbykaupenjoe.tutorialmod.item.custom.Firestone;
 import net.tutorialsbykaupenjoe.tutorialmod.item.custom.ModSpawnEggItem;
+import net.tutorialsbykaupenjoe.tutorialmod.util.ModSoundEvents;
 
 public class ModItems {
 
@@ -97,6 +98,10 @@ public class ModItems {
     public static final RegistryObject<Item> KAUPENSTAFF = ITEMS.register("kaupen_staff",
             () -> new Item(new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP).maxStackSize(1)));
 
+
+    public static final RegistryObject<Item> BAR_BRAWL_MUSIC_DISC = ITEMS.register("bar_brawl_music_disc",
+            () -> new MusicDiscItem(1, () -> ModSoundEvents.BAR_BRAWL.get(),
+                    new Item.Properties().maxStackSize(1).group(ModItemGroup.TUTORIAL_GROUP)));
 
 
 

@@ -5,5 +5,13 @@
     "sounds": [
       "tutorialmod:small_explosion"
     ]
+  },
+  "bar_brawl": {
+    "sounds": [
+      {
+        "name": "tutorialmod:bar_brawl",
+        "stream": true
+      }
+    ]
   }
 }
