@@ -1,0 +1,9 @@
+{
+  "conditions": [
+    {
+      "condition": "block_state_property",
+      "block": "minecraft:magma_block"
+    }
+  ],
+  "addition": "tutorialmod:firestone"
+}
