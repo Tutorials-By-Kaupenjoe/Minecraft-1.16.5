@@ -1,22 +1,22 @@
 {
   "display": {
     "icon": {
-      "item": "tutorialmod:firestone"
+      "item": "tutorialmod:amethyst"
     },
-    "title": "Fiery Hot",
-    "description": "Get a hold of a Firestone! ",
+    "title": "Tutorial Mod",
+    "description": "The Power lies in the Amethyst",
     "frame": "task",
     "show_toast": true,
-    "announce_to_chat": true
+    "announce_to_chat": true,
+    "background": "tutorialmod:textures/block/amethyst_block.png"
   },
-  "parent": "tutorialmod:tutorial_mod",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "tutorialmod:firestone"
+            "item": "tutorialmod:amethyst"
           }
         ]
       }
