@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:default",
+  "config": {
+    "top_material": {
+      "Name": "tutorialmod:amethyst_block"
+    },
+    "under_material": {
+      "Name": "tutorialmod:amethyst_ore"
+    },
+    "underwater_material": {
+      "Name": "minecraft:gravel"
+    }
+  }
+}
+
