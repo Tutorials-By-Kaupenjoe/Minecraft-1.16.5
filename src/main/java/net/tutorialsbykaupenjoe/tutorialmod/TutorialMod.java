@@ -33,6 +33,7 @@ import net.tutorialsbykaupenjoe.tutorialmod.container.ModContainers;
 import net.tutorialsbykaupenjoe.tutorialmod.data.recipes.ModRecipeTypes;
 import net.tutorialsbykaupenjoe.tutorialmod.entity.ModEntityTypes;
 import net.tutorialsbykaupenjoe.tutorialmod.entity.render.BuffZombieRenderer;
+import net.tutorialsbykaupenjoe.tutorialmod.entity.render.ModBoatRenderer;
 import net.tutorialsbykaupenjoe.tutorialmod.entity.render.PigeonRenderer;
 import net.tutorialsbykaupenjoe.tutorialmod.fluid.ModFluids;
 import net.tutorialsbykaupenjoe.tutorialmod.item.ModItems;
@@ -135,6 +136,7 @@ public class TutorialMod {
 
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.BUFF_ZOMBIE.get(), BuffZombieRenderer::new);
         RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.PIGEON.get(), PigeonRenderer::new);
+        RenderingRegistry.registerEntityRenderingHandler(ModEntityTypes.REDWOOD_BOAT.get(), ModBoatRenderer::new);
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event) {

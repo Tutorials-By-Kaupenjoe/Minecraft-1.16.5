@@ -9,6 +9,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.tutorialsbykaupenjoe.tutorialmod.TutorialMod;
 import net.tutorialsbykaupenjoe.tutorialmod.entity.custom.BuffZombieEntity;
+import net.tutorialsbykaupenjoe.tutorialmod.entity.custom.ModBoatEntity;
 import net.tutorialsbykaupenjoe.tutorialmod.entity.custom.PigeonEntity;
 
 public class ModEntityTypes {
@@ -26,6 +27,12 @@ public class ModEntityTypes {
                     () -> EntityType.Builder.create(PigeonEntity::new,
                                     EntityClassification.CREATURE).size(0.4f, 0.3f)
                             .build(new ResourceLocation(TutorialMod.MOD_ID, "pigeon").toString()));
+
+    public static final RegistryObject<EntityType<ModBoatEntity>> REDWOOD_BOAT =
+            ENTITY_TYPES.register("redwood_boat",
+                    () -> EntityType.Builder.<ModBoatEntity>create(ModBoatEntity::new,
+                                    EntityClassification.MISC).size(0.5f, 0.5f)
+                            .build(new ResourceLocation(TutorialMod.MOD_ID, "redwood_boat").toString()));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
