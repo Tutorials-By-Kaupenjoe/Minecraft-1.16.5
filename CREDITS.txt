@@ -11,6 +11,10 @@ Bar Brawl Music from:
 https://freepd.com/upbeat.php
 Written by Bryan Teoh.
 
+Thank you to 2008matteo:
+https://github.com/2008matteo
+for the Biome Datapack addition!
+
 ModStructures, HouseStructure as well as the addDimensionalSpacing method in ModWorldEvents
 are slightly modified versions of https://github.com/TelepathicGrunt/StructureTutorialMod
 that is distributed under the MIT-License:
