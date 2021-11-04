@@ -3,14 +3,23 @@ package net.tutorialsbykaupenjoe.tutorialmod.block.custom;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItemUseContext;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.state.StateContainer;
+import net.minecraft.util.ActionResultType;
+import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.shapes.IBooleanFunction;
 import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.world.IBlockReader;
+import net.minecraft.world.World;
+import net.minecraft.world.server.ServerWorld;
+import net.tutorialsbykaupenjoe.tutorialmod.world.dimension.KJTeleporter;
+import net.tutorialsbykaupenjoe.tutorialmod.world.dimension.ModDimensions;
 
 import javax.annotation.Nullable;
 import java.util.stream.Stream;
@@ -63,6 +72,33 @@ public class KaupenAltarBlock extends HorizontalBlock {
             Block.makeCuboidShape(11, 11, 5, 12, 14, 11),
             Block.makeCuboidShape(5, 11, 5, 11, 13, 6)
     ).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, IBooleanFunction.OR)).get();
+
+    @Override
+    public ActionResultType onBlockActivated(BlockState state, World worldIn, BlockPos pos,
+                                             PlayerEntity player, Hand handIn, BlockRayTraceResult hit) {
+        if (!worldIn.isRemote()) {
+            if (!player.isCrouching()) {
+                MinecraftServer server = worldIn.getServer();
+
+                if (server != null) {
+                    if (worldIn.getDimensionKey() == ModDimensions.KJDim) {
+                        ServerWorld overWorld = server.getWorld(World.OVERWORLD);
+                        if (overWorld != null) {
+                            player.changeDimension(overWorld, new KJTeleporter(pos, false));
+                        }
+                    } else {
+                        ServerWorld kjDim = server.getWorld(ModDimensions.KJDim);
+                        if (kjDim != null) {
+                            player.changeDimension(kjDim, new KJTeleporter(pos, true));
+                        }
+                    }
+                    return ActionResultType.SUCCESS;
+                }
+            }
+        }
+
+        return super.onBlockActivated(state, worldIn, pos, player, handIn, hit);
+    }
 
     @Override
     public VoxelShape getShape(BlockState state, IBlockReader worldIn, BlockPos pos, ISelectionContext context) {
