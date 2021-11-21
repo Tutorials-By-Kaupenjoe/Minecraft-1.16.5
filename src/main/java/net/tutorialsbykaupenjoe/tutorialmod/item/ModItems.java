@@ -10,10 +10,7 @@ import net.tutorialsbykaupenjoe.tutorialmod.TutorialMod;
 import net.tutorialsbykaupenjoe.tutorialmod.block.ModBlocks;
 import net.tutorialsbykaupenjoe.tutorialmod.entity.ModEntityTypes;
 import net.tutorialsbykaupenjoe.tutorialmod.fluid.ModFluids;
-import net.tutorialsbykaupenjoe.tutorialmod.item.custom.Firestone;
-import net.tutorialsbykaupenjoe.tutorialmod.item.custom.ModBoatItem;
-import net.tutorialsbykaupenjoe.tutorialmod.item.custom.ModSpawnEggItem;
-import net.tutorialsbykaupenjoe.tutorialmod.item.custom.StaffItem;
+import net.tutorialsbykaupenjoe.tutorialmod.item.custom.*;
 import net.tutorialsbykaupenjoe.tutorialmod.util.ModSoundEvents;
 
 public class ModItems {
@@ -63,7 +60,7 @@ public class ModItems {
                     new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP)));
 
     public static final RegistryObject<Item> AMETHYST_HELMET = ITEMS.register("amethyst_helmet",
-            () -> new ArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.HEAD,
+            () -> new ModArmorItem(ModArmorMaterial.AMETHYST, EquipmentSlotType.HEAD,
                     new Item.Properties().group(ModItemGroup.TUTORIAL_GROUP)));
 
 
