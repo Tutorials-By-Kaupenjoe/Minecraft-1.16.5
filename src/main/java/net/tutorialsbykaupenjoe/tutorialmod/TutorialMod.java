@@ -28,6 +28,7 @@ import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.tutorialsbykaupenjoe.tutorialmod.block.ModBlocks;
+import net.tutorialsbykaupenjoe.tutorialmod.block.ModPaintings;
 import net.tutorialsbykaupenjoe.tutorialmod.block.ModWoodTypes;
 import net.tutorialsbykaupenjoe.tutorialmod.container.ModContainers;
 import net.tutorialsbykaupenjoe.tutorialmod.data.recipes.ModRecipeTypes;
@@ -64,6 +65,7 @@ public class TutorialMod {
 
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+        ModPaintings.register(eventBus);
         ModTileEntities.register(eventBus);
         ModContainers.register(eventBus);
 
