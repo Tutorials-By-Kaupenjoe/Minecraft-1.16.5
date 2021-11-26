@@ -37,6 +37,7 @@ import net.tutorialsbykaupenjoe.tutorialmod.entity.render.ModBoatRenderer;
 import net.tutorialsbykaupenjoe.tutorialmod.entity.render.PigeonRenderer;
 import net.tutorialsbykaupenjoe.tutorialmod.fluid.ModFluids;
 import net.tutorialsbykaupenjoe.tutorialmod.item.ModItems;
+import net.tutorialsbykaupenjoe.tutorialmod.paintings.ModPaintings;
 import net.tutorialsbykaupenjoe.tutorialmod.screen.LightningChannelerScreen;
 import net.tutorialsbykaupenjoe.tutorialmod.tileentity.ModTileEntities;
 import net.tutorialsbykaupenjoe.tutorialmod.util.ModItemModelProperties;
@@ -75,6 +76,7 @@ public class TutorialMod {
         ModEntityTypes.register(eventBus);
         ModBiomes.register(eventBus);
         ModBiomesDatapack.register(eventBus);
+        ModPaintings.register(eventBus);
 
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading

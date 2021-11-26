@@ -15,6 +15,9 @@ Thank you to 2008matteo:
 https://github.com/2008matteo
 for the Biome Datapack addition!
 
+Paintings (sunset.png and plant.png) by PlatinumG17:
+https://www.curseforge.com/members/platinumg17/projects
+
 KJTeleporter and KaupenPortalBlock HEAVILY inspired by Dunkmania101:
 https://github.com/Dunkmania101/DaylightDimension distributed under the MIT-License:
 
